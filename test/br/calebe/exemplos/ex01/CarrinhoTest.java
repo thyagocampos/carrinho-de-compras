@@ -35,8 +35,14 @@ public class CarrinhoTest {
         carrinho.add(livro);
         Produto deitel = new Produto("Java: como programar", 150.00);
         carrinho.add(deitel);
+        
+        //--caso de teste inserido na aula de 17/09/2013
+        Produto head_first = new Produto("Java: como programar", 50.00);
+        carrinho.add(head_first);
+        
         Produto menor;
         menor = carrinho.menorProduto();
+                
         assertArrayEquals(new Object[]{livro}, new Object[]{menor});
     }
 
@@ -48,4 +54,13 @@ public class CarrinhoTest {
         original = carrinho.menorProduto();
         assertArrayEquals(new Object[]{original}, new Object[]{copia});
     }
+    
+    //Caso de teste criado em 17/09/2013
+    @Test
+    public void exibeDescricaoDeProdutos() {
+        Produto teste = new Produto("Use a cabeça", 70.00);
+        System.out.println("O produto: " + teste.getDescricao() + " custa " + teste.getDescricao());
+                    
+     }
+    
 }

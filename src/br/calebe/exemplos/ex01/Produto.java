@@ -14,6 +14,11 @@ public class Produto {
         return preco;
     }
 
+    //Getter criado para teste
+    public String getDescricao(){
+        return nome;
+    }
+    
     @Override
     public boolean equals(Object obj) {
         return equals((Produto) obj);
